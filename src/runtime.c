@@ -861,7 +861,7 @@ int main(int argc, char *argv[]) {
         char *dir = realpath(appimage_path, NULL );
 
         char options[100];
-        sprintf(options, "ro,offset=%lu", fs_offset);
+        sprintf(options, "allow_other,ro,offset=%lu", fs_offset);
 
         child_argv[0] = dir;
         child_argv[1] = "-o";
